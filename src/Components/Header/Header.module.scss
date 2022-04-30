@@ -1,0 +1,68 @@
+@import "../../styles/sass-base.scss";
+
+.header {
+  padding: 30px 100px;
+
+  &__nav-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav-group {
+    display: flex;
+  }
+
+  &__link-content {
+    line-height: 19px;
+    padding: 0 32px 17px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--black);
+
+    &--active {
+      color: var(--green);
+      border-bottom: 1px solid var(--green);
+    }
+
+    &:hover {
+      transform: scale(1.014);
+    }
+  }
+
+  &__logo-wrapper {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(50%);
+    width: 32px;
+  }
+
+  &__logo {
+    width: 100%;
+  }
+
+  &__icon-group {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+  }
+
+  &__icon-wrapper {
+    width: 20px;
+  }
+
+  &__icon {
+    width: 100%;
+    fill: var(--black-01);
+  }
+
+  &__icon-wrapper-small {
+    width: 9px;
+  }
+
+  &__icon-small {
+    width: 100%;
+    fill: var(--black-01);
+  }
+}
