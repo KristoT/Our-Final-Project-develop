@@ -1,8 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { CartProvider } from './contexts/cart.context';
 
-ReactDOM.render(<App />, document.getElementById('root')
+import { store } from "./store/store";
+
+import App from "./App";
+const container = document.getElementById("root")
+const root = ReactDOM.createRoot(container)
+
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>
 );
 
